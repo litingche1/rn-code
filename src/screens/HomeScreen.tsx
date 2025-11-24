@@ -71,6 +71,12 @@ export default function HomeScreen({ navigation }: Props) {
         />
         <View style={{ height: 10 }} />
         <Button 
+          title="查看 Tailwind 示例" 
+          color="#0ea5e9"
+          onPress={() => navigation.navigate('Tailwind')} 
+        />
+        <View style={{ height: 10 }} />
+        <Button 
           title="退出登录" 
           color="#FF3B30"
           onPress={handleLogout} 

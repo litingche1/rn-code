@@ -8,6 +8,7 @@ import HomeScreen from '../screens/HomeScreen';
 import DetailsScreen from '../screens/DetailsScreen';
 import LoginScreen from '../screens/LoginScreen';
 import DemoScreen from '../screens/DemoScreen';
+import TailwindScreen from '../screens/TailwindScreen';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -34,6 +35,11 @@ export default function AppNavigator() {
               name="Demo" 
               component={DemoScreen} 
               options={{ title: '组件展示' }}
+            />
+            <Stack.Screen 
+              name="Tailwind" 
+              component={TailwindScreen} 
+              options={{ title: 'Tailwind 示例' }}
             />
           </>
         ) : (

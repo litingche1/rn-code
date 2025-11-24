@@ -3,4 +3,5 @@ export type RootStackParamList = {
   Home: undefined;
   Details: { itemId: number };
   Demo: undefined;
+  Tailwind: undefined;
 };
