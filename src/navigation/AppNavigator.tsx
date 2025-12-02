@@ -9,6 +9,9 @@ import DetailsScreen from '../screens/DetailsScreen';
 import LoginScreen from '../screens/LoginScreen';
 import DemoScreen from '../screens/DemoScreen';
 import TailwindScreen from '../screens/TailwindScreen';
+import AnalysisScreen from '../screens/AnalysisScreen';
+
+import TabNavigator from './TabNavigator';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -22,14 +25,19 @@ export default function AppNavigator() {
           // 已登录状态下的路由栈
           <>
             <Stack.Screen 
-              name="Home" 
-              component={HomeScreen} 
-              options={{ title: '首页' }}
+              name="MainTab" 
+              component={TabNavigator} 
+              options={{ headerShown: false }}
             />
             <Stack.Screen 
               name="Details" 
               component={DetailsScreen} 
               options={{ title: '详情' }}
+            />
+            <Stack.Screen 
+              name="Analysis" 
+              component={AnalysisScreen} 
+              options={{ title: '数据中心' }}
             />
             <Stack.Screen 
               name="Demo" 
